@@ -1,0 +1,331 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Memory Game</title>
+
+{% include "base.html" %}
+</head>
+
+
+<body>
+
+
+<script>
+var lessonNumber = {{lesson_number | tojson}};
+</script>
+
+<div class="memoryGameContent">
+
+
+
+<span class="mainButtons hidden" id="mainButtonsGame">
+
+            <div onclick="showMenu()" class="btns"  id="btnMenu">
+                <font size="5"><i id="bars" class="fas fa-bars"></i></font>
+            </div>
+
+            <div onclick="showVocab()" class="btns" id="dictionaryButt2">
+                <font size="4"><i id="bookIc2" class="fas fa-book"></i></font>
+            </div>
+
+            <div onclick="showNotebook()" class="btns" id="notebookButt2">
+                <font size="4"><i id="pencil2" class="fas fa-pencil-alt"></i></font>
+            </div>
+
+            <div class="btns backToDashboard" id=""><a href="/dashboard"  class="">
+                <i id="exitDoor2" class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        </span>
+
+
+
+
+
+
+
+
+
+
+    <div class="medalNotific memory">
+
+        <p class="formHead">Your score was not high enough.</p>
+
+           <form class="formBrSilGol" method="POST" action="">
+
+                 <a class="submitBtn" href="/">Dashboard</a>
+                <a class="submitBtn"  href="{{try_again_url}}" >Try Again</a>
+          </form>
+    </div>
+
+
+    <div class="medalNotific memory">
+        <span class="formHead">You have attained a bronze medal!</span>
+        <div class="medalWrap bronze"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+            <a class="submitBtn"  href="/" type="submit">Ok</a>
+        </form>
+    </div>
+
+
+    <div class="medalNotific memory">
+        <span class="formHead">You have attained a silver medal!</span>
+        <div class="medalWrap silver"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+            <a class="submitBtn"  href="/" type="submit">Ok</a>
+
+        </form>
+    </div>
+
+    <div class="medalNotific memory">
+        <span class="formHead">You have attained a golden medal!</span>
+    <div class="medalWrap gold"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+
+            <a class="submitBtn"  href="/" type="submit">Ok</a>
+
+        </form>
+    </div>
+
+
+
+
+
+
+<div id="gameBoard">
+
+    <div id="turnHandler">
+        <div id="dobre">Correct! Play again!</div>
+        <div id="spatne">Wrong!</div>
+        <div id="botGetsPoint">Bot got a correct pair!</div>
+    </div>
+
+
+       <div class="RowRib">
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)"  class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+           <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+    </div>
+
+       <div class="RowRib">
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)"  class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+           <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+    </div>
+
+           <div class="RowRib">
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)"  class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+           <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+    </div>
+
+           <div class="RowRib">
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+        <div class="maincontainer0">
+            <div onclick="flipIt(this)"  class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+           <div class="maincontainer0">
+            <div onclick="flipIt(this)" class="thecard0">
+                <div class="cardface thefront">?</div>
+
+
+                <div class="cardface theback"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+        <div id="botPoints">
+            <div class="bounce-5"  id="botPlays"><font size="6"><i class="fas fa-arrow-down"></i></font></div>
+            <font size="8"><i class="fas fa-robot"></i></font>
+
+        <div id="botPointBox"></div>
+        </div>
+
+        <div id="userPoints">
+            <div class="bounce-5" id="yourTurn"><font size="6"><i class="fas fa-arrow-down"></i></font></div>
+            <font size="8"><i class="fas fa-user-alt"></i></font>
+
+        <div id="userPointBox"></div>
+        </div>
+
+</div>
+
+
+
+
+
+
+</div>
+{% block content %}{% endblock %}
+<script src="static/js/memory-game.js"></script>
+
+</body>
+</html>

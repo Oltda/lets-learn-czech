@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag</title>
+
+{% include "base.html" %}
+</head>
+
+<body>
+
+
+<script>
+var lessonNumber = {{lesson_number | tojson}};
+</script>
+
+
+
+
+
+    <h2 id="headline">Put the Words in Correct Order</h2>
+
+    <div class="tryTransWrap">
+        <div id="tryAgain">Try again!</div>
+
+         <div id="translatedEng"></div>
+
+
+    </div>
+
+        <div id="containersWrap">
+            <div id="containers">
+
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+                <div onclick="removeWord(this)" class="dropContainer"></div>
+
+
+
+            </div>
+
+        </div>
+
+
+    <div class="wordsContainer" id="words">
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+            <div onclick="chooseWord(this)" class="slovo"></div>
+    </div>
+
+            <div class="bounce-5 disactivated" onclick="generateSentence()" id="nextSent">
+                 <span style="padding-top:15px" class="fas fa-angle-double-right"></span>
+             </div>
+
+
+    <div class="medalNotific noM">
+
+        <p class="formHead">Your score was not high enough.</p>
+
+           <form class="formBrSilGol" method="POST" action="">
+
+                              <a class="submitBtn" href="/">Dashboard</a>
+                <a class="submitBtn"  href="{{try_again_url}}" >Try Again</a>
+          </form>
+    </div>
+
+
+    <div class="medalNotific">
+        <span class="formHead">You have attained a bronze medal!</span>
+        <div class="medalWrap bronze"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+            <a class="submitBtn" href="/" name="submit" value="bronze" type="submit">Ok</a>
+        </form>
+    </div>
+
+
+    <div class="medalNotific">
+        <span class="formHead">You have attained a silver medal!</span>
+        <div class="medalWrap silver"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+            <a class="submitBtn"  href="/" name="submit" value="silver" type="submit">Ok</a>
+
+        </form>
+    </div>
+
+    <div class="medalNotific">
+        <span class="formHead">You have attained a golden medal!</span>
+    <div class="medalWrap gold"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+
+            <a class="submitBtn"  href="/" name="submit" value="gold" type="submit">Ok</a>
+
+        </form>
+    </div>
+
+
+<script src="static/js/mixed-sentences.js"></script>
+
+{% block content %}{% endblock %}
+
+
+</body>
+</html>

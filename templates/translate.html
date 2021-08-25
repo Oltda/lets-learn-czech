@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate Test</title>
+
+{% include "base.html" %}
+</head>
+
+<body>
+
+
+
+<script>
+var lessonNumber = {{lesson_number | tojson}};
+</script>
+
+
+
+    <div id="messageBox">
+        <font size="8"><i class="fas fa-check correctTranslat"></i></font>
+    </div>
+
+
+
+<div id="messageBox2">
+    <h2>Wrong!</h2>
+    <p id="correctPart"></p>
+    <p id="hint"></p>
+</div>
+
+
+
+    <div class="questionAnswerPanel">
+
+        <div id="engSentWrap" class="engSentWrap">
+            <div id='engSentence'></div>
+        </div>
+
+
+
+
+
+        <div id="questionWrapper">
+            <input id='czAnswer' type='text'>
+
+            <div onclick='checkAnswer()' id='checkCzTransl'>Check</div>
+
+            <div id="nextSentence" class="slideNext" onclick= "slideAway()">
+                <span class="fas fa-angle-double-right"></span>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+<div id="CzechKeyboard">
+    <div onclick="copyChar(this)" class="foregnChar">ě</div>
+    <div onclick="copyChar(this)" class="foregnChar">š</div>
+    <div onclick="copyChar(this)" class="foregnChar">č</div>
+    <div onclick="copyChar(this)" class="foregnChar">ř</div>
+    <div onclick="copyChar(this)" class="foregnChar">ž</div>
+    <div onclick="copyChar(this)" class="foregnChar">ý</div>
+    <div onclick="copyChar(this)" class="foregnChar">á</div>
+    <div onclick="copyChar(this)" class="foregnChar">í</div>
+    <div onclick="copyChar(this)" class="foregnChar">é</div>
+    <div onclick="copyChar(this)" class="foregnChar">ú</div>
+    <div onclick="copyChar(this)" class="foregnChar">ů</div>
+</div>
+
+
+
+
+
+<div id="finalStats"></div>
+
+
+
+
+    <div class="medalNotific translation">
+
+        <p class="formHead">Your score was not high enough.</p>
+
+           <form class="formBrSilGol" method="POST" action="">
+
+                 <a class="submitBtn" href="/">Dashboard</a>
+                <a class="submitBtn"  href="{{try_again_url}}" >Try Again</a>
+          </form>
+    </div>
+
+
+    <div class="medalNotific">
+        <span class="formHead">You have attained a bronze medal!</span>
+        <div class="medalWrap bronze"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+            <a class="submitBtn"  href="/" type="submit">Ok</a>
+        </form>
+    </div>
+
+
+    <div class="medalNotific">
+        <span class="formHead">You have attained a silver medal!</span>
+        <div class="medalWrap silver"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+            <a class="submitBtn"  href="/" type="submit">Ok</a>
+
+        </form>
+    </div>
+
+
+
+    <div class="medalNotific">
+        <span class="formHead">You have attained a golden medal!</span>
+    <div class="medalWrap gold"><font size="8"> <i class="fas fa-medal formMedal"></i></font></div>
+        <form class="formBrSilGol" method="POST" action="">
+
+            <a class="submitBtn"  href="/" type="submit">Ok</a>
+
+        </form>
+    </div>
+
+
+
+<script src="static/js/translate.js"></script>
+
+
+
+
+
+
+
+{% block content %}{% endblock %}
+</body>
+</html>

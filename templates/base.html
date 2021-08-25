@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index02.css')}}">
+    <script src="https://kit.fontawesome.com/24a527e4a1.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
+
+    <link href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
+
+
+    {% block head %}{% endblock %}
+</head>
+
+
+
+
+
+
+
+<span class="mainButtons hidden" id="mainButtonsGame">
+
+
+
+            <div onclick="showVocab()" class="btns" id="dictionaryButt2">
+                <font size="4"><i id="bookIc2" class="fas fa-book"></i></font>
+            </div>
+
+
+            <div class="btns backToDashboard" id=""><a href="/"  class="">
+                <i id="exitDoor2" class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        </span>
+
+    <span class="mainButtons" id="mainButtons">
+
+            <div onclick="showMenu()" class="btns"  id="btnMenu">
+                <font size="5"><i id="bars" class="fas fa-bars"></i></font>
+            </div>
+
+            <div class="btns" id="dictionaryButt">
+                <font size="4"><i id="bookIc" class="fas fa-book"></i></font>
+            </div>
+
+    </span>
+
+
+
+
+
+
+
+
+
+
+
+<div id="vocDrag">
+
+
+   <div class="vocabularyNumbercont">
+
+
+
+     <div onclick="changeVocab(0)" class="closeInfVocab">L1</div>
+         <div onclick="changeVocab(1)" class="closeInfVocab">L2</div>
+          <div onclick="changeVocab(2)" class="closeInfVocab">L3</div>
+        <div onclick="changeVocab(3)" class="closeInfVocab">L4</div>
+        <div onclick="changeVocab(4)" class="closeInfVocab">L5</div>
+
+    </div>
+
+
+
+
+    <div  id="vocHead">Vocabulary</div>
+
+    <div class="wrapperAllVoc">
+
+
+
+        <div class="wordsTableCont slideLeft">
+            <div class="wordsTable"></div>
+        </div>
+
+        <div class="wordsTableCont">
+            <div class="wordsTable"></div>
+        </div>
+
+        <div class="wordsTableCont">
+            <div class="wordsTable"></div>
+        </div>
+
+         <div class="wordsTableCont">
+            <div class="wordsTable"></div>
+        </div>
+
+        <div class="wordsTableCont">
+            <div class="wordsTable"></div>
+        </div>
+
+</div>
+
+
+    <div id="wordInf">
+       <div onclick="closeTable()" class="closeInf dictionary"><i class="fas fa-times cls"></i></div>
+        <p class="WordInfHead">Word Info
+
+        </p>
+
+<div class="infowrapper">
+        <table class="infoTable">
+
+        <tr>
+            <th class="keyInf"></th>
+            <th class="ValInf"></th>
+        </tr>
+        <tr>
+            <td class="keyInf"></td>
+            <td class="ValInf"></td>
+        </tr>
+                    <tr>
+            <th class="keyInf"></th>
+            <th class="ValInf"></th>
+        </tr>
+        <tr>
+            <td class="keyInf"></td>
+            <td class="ValInf"></td>
+        </tr>
+                    <tr>
+            <th class="keyInf"></th>
+            <th class="ValInf"></th>
+        </tr>
+        <tr>
+            <td class="keyInf"></td>
+            <td class="ValInf"></td>
+        </tr>
+                    <tr>
+            <th class="keyInf"></th>
+            <th class="ValInf"></th>
+        </tr>
+        <tr>
+            <td class="keyInf"></td>
+            <td class="ValInf"></td>
+        </tr>
+                    <tr>
+            <th class="keyInf"></th>
+            <th class="ValInf"></th>
+        </tr>
+        <tr>
+            <td class="keyInf"></td>
+            <td class="ValInf"></td>
+        </tr>
+        </table>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="newSidebar">
+    <div id="sections">
+        <h2 class="menuTitle first">Learn Czech</h2>
+
+
+
+       <ul  class="lessonMainUl">
+           <a href="/"  class="menuTitle link">Home</a>
+         </ul>
+
+
+
+        <ul onclick="showSections(this)" class="lessonMainUl">
+
+            <p class="menuTitle withArrow">Lesson 1</p>
+            <i class="fas fa-angle-down menuLesson"></i>
+        </ul>
+        <ul class="lessonSibling">
+
+             <ul class="sectionUl"><a href="/grammar1"  class="menuTitle link">Grammar Overview</a></ul>
+
+
+
+            <ul onclick="showSections(this)" class="sectionUl"><p class="menuTitle">Grammar Tests
+            <span class="empty"></span>
+            </p></ul>
+              <ul class="lessonSibling">
+                  <li class="subSectionLi"><a href="/translate-test-l1" class="menuTitle link">Translate</a></li>
+                  <li class="subSectionLi"><a href="/mix-test-l1" class="menuTitle link">Mixed Sentences</a></li>
+              </ul>
+
+
+            <ul class="sectionUl"><a href="/memory-game-l1" class="menuTitle link">Memory Game</a></ul>
+
+        </ul>
+
+
+
+        <ul onclick="showSections(this)" class="lessonMainUl" id="lesson2">
+            <p class="menuTitle withArrow">Lesson 2</p>
+            <i class="fas fa-angle-down menuLesson"></i>
+       </ul>
+        <ul class="lessonSibling">
+
+
+            <ul class="sectionUl"><a href="/grammar2"  class="menuTitle link">Grammar Overview</a></ul>
+
+
+            <ul class="sectionUl"><a href="/readandgram2" class="menuTitle link">Reading</a></ul>
+
+
+            <ul onclick="showSections(this)" class="sectionUl"><p class="menuTitle">Grammar Tests
+            <span class="empty"></span>
+            </p></ul>
+              <ul class="lessonSibling">
+                  <li class="subSectionLi"><a href="/translate-test-l2" class="menuTitle link">Translate</a></li>
+                  <li class="subSectionLi"><a href="/mix-test-l2" class="menuTitle link">Mixed Sentences</a></li>
+              </ul>
+
+
+            <ul class="sectionUl"><a href="/memory-game-l2" class="menuTitle link">Memory Game</a></ul>
+        </ul>
+
+
+
+
+        <ul onclick="showSections(this)" class="lessonMainUl" id="lesson3">
+            <p class="menuTitle withArrow">Lesson 3</p>
+            <i class="fas fa-angle-down menuLesson"></i>
+        </ul>
+        <ul class="lessonSibling">
+
+
+            <ul class="sectionUl"><a href="/grammar3"  class="menuTitle link">Grammar Overview</a></ul>
+
+            <ul class="sectionUl"><a href="/readandgram3" class="menuTitle link">Reading</a></ul>
+
+
+            <ul onclick="showSections(this)" class="sectionUl"><p class="menuTitle">Grammar Tests
+            <span class="empty"></span>
+            </p></ul>
+              <ul class="lessonSibling">
+                  <li class="subSectionLi"><a href="/translate-test-l3" class="menuTitle link">Translate</a></li>
+                  <li class="subSectionLi"><a href="/mix-test-l3" class="menuTitle link">Mixed Sentences</a></li>
+              </ul>
+
+
+            <ul class="sectionUl"><a href="/memory-game-l3" class="menuTitle link">Memory Game</a></ul>
+
+        </ul>
+
+
+
+
+        <ul onclick="showSections(this)" class="lessonMainUl" id="lesson4">
+            <p class="menuTitle withArrow">Lesson 4</p>
+            <i class="fas fa-angle-down menuLesson"></i>
+        </ul>
+        <ul class="lessonSibling">
+
+
+            <ul class="sectionUl"><a href="/grammar4"  class="menuTitle link">Grammar Overview</a></ul>
+
+            <ul class="sectionUl"><a href="/readandgram4" class="menuTitle link">Reading</a></ul>
+
+
+
+            <ul onclick="showSections(this)" class="sectionUl"><p class="menuTitle">Grammar Tests
+            <span class="empty"></span>
+            </p></ul>
+              <ul class="lessonSibling">
+                  <li class="subSectionLi"><a href="/translate-test-l4" class="menuTitle link">Translate</a></li>
+                  <li class="subSectionLi"><a href="/mix-test-l4" class="menuTitle link">Mixed Sentences</a></li>
+              </ul>
+
+
+            <ul class="sectionUl"><a href="/memory-game-l4" class="menuTitle link">Memory Game</a></ul>
+        </ul>
+
+
+
+        <ul onclick="showSections(this)" class="lessonMainUl" id="lesson5">
+              <p class="menuTitle withArrow">Lesson 5</p>
+              <i class="fas fa-angle-down menuLesson"></i>
+        </ul>
+        <ul class="lessonSibling">
+
+
+            <ul class="sectionUl"><a href="/grammar5"  class="menuTitle link">Grammar Overview</a></ul>
+
+            <ul class="sectionUl"><a href="/readandgram5" class="menuTitle link">Reading</a></ul>
+
+
+
+            <ul onclick="showSections(this)" class="sectionUl"><p class="menuTitle">Grammar Tests
+            <span class="empty"></span>
+            </p></ul>
+              <ul class="lessonSibling">
+                  <li class="subSectionLi"><a href="/translate-test-l5" class="menuTitle link">Translate</a></li>
+                  <li class="subSectionLi"><a href="/mix-test-l5" class="menuTitle link">Mixed Sentences</a></li>
+              </ul>
+
+
+            <ul class="sectionUl"><a href="/memory-game-l5" class="menuTitle link">Memory Game</a></ul>
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="static/js/base.js"></script>
+
+<script src="static/js/vocabulary1.js"></script>
+
+
+
+
+
+    {% block content %}{% endblock %}
+</body>
+</html>
