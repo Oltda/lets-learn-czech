@@ -1,20 +1,21 @@
 # lets-learn-czech
 
-![Memory Game - Google Chrome 2021-08-26 22-03-26](https://user-images.githubusercontent.com/75533746/130987939-854f63f7-5bb3-4717-aef7-63d3def0fd25.gif)
+
+![dictionary](https://user-images.githubusercontent.com/75533746/131002875-adb62063-917a-411a-b862-a89725eaf7be.gif)
 
 ______________________________________________________________________________________________________________________
 
-![edited](https://user-images.githubusercontent.com/75533746/131000784-2050a466-4bc9-459b-86cd-48da89600558.gif)
+![navbar](https://user-images.githubusercontent.com/75533746/131002882-0f0667fe-35ec-42fb-90de-2112b601801c.gif)
 
 ______________________________________________________________________________________________________________________
 
-
-![Home - Google Chrome 2021-08-26 22-07-52](https://user-images.githubusercontent.com/75533746/130989640-6d5a787c-9d54-4962-9bd6-f8cc669bcf23.gif)
-
-______________________________________________________________________________________________________________________
-
-![Translate Test - Google Chrome 2021-08-26 22-14-31](https://user-images.githubusercontent.com/75533746/130989746-b08c9dce-6d7c-424e-bbaf-58fe44017a9d.gif)
+![translate](https://user-images.githubusercontent.com/75533746/131002968-5983628e-6123-4c00-b4a9-3a37bb34d29e.gif)
 
 ______________________________________________________________________________________________________________________
 
-![Home - Google Chrome 2021-08-26 22-10-28](https://user-images.githubusercontent.com/75533746/130990077-bf0cb575-6875-42dd-b26e-f0072eea0dfa.gif)
+![memory](https://user-images.githubusercontent.com/75533746/131002976-ad2268dc-0fab-4151-b816-65302d58a4a0.gif)
+
+______________________________________________________________________________________________________________________
+
+![mixed](https://user-images.githubusercontent.com/75533746/131002985-4544ec4a-44f8-4f1b-9a0f-1ac119ddcca2.gif)
+
