@@ -179,8 +179,6 @@ const tryAgain = document.getElementById("tryAgain")
 
             let NextTotalWords = withWrongWords[0].length
 
-
-
             let indexy = []
             while (indexy.length < NextTotalWords){
                     let r = Math.floor(Math.random() * NextTotalWords)
@@ -190,7 +188,6 @@ const tryAgain = document.getElementById("tryAgain")
             }
 
             return indexy
-
      }
 
 

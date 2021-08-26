@@ -4,10 +4,10 @@ function showSections(a){
 a.classList.toggle("openLesson")
 
 
-var sibl = a.nextElementSibling
+let sibl = a.nextElementSibling
 sibl.classList.toggle("show")
 
-var arrow = a.children[1]
+let arrow = a.children[1]
 
 
 if(arrow != null){
